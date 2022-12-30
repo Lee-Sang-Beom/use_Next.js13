@@ -24,7 +24,7 @@ Study - use Next.js 13
 
 ### 2.2 next.config.js
 
-- app 디렉토리 사용을 위해, `next.config.js`라는 설정 파일 하나를 생성해 주어야합니다.
+- app 디렉토리 사용을 위해, `next.config.js`라는 설정 파일 하나를 생성해 주어야 한다.
     ```
     // next.config.js
 
@@ -36,11 +36,11 @@ Study - use Next.js 13
 
 ### 2.3 axios
 
-- ajax 통신을 위한 라이브러리인 axios를 설치합니다
+- ajax 통신을 위한 라이브러리인 axios를 설치한다.
     ```
     npm i axios
     ```
-    
+
 ****
 
 ## 3. 변화
@@ -95,10 +95,38 @@ Study - use Next.js 13
 
 ### 3.2 app 디렉토리 (2) : React Server Component
 - Next.js의 app 디렉토리에서 리액트 서버 컴포넌트를 사용한다.
-    - 이는, 서버에서만 컴포넌트를 렌더링하고 클라이언트에 전송되는 자바스크립트의 양을 줄여 초기 페이지 로딩을 더 빠르게 수행할 수 있도록 한다
+    - 이는, 서버에서만 컴포넌트를 렌더링하여 클라이언트에 전송되는 자바스크립트의 양을 줄여 **초기 페이지 로딩을 더 빠르게 수행**할 수 있도록 한다
 
 ### 3.3 app 디렉토리 (3) : Streaming
 - 스트리밍은 app 디렉토리에서 loading.js라는 예약 파일을 생성하여 사용자가 렌더링이 되기 이전에 로딩 중인 화면을 표시할 수 있는 기능이다.
 
-
 ### 3.4 Data Fetching
+- Next.js에서, fetch Web API를 사용하는 방법이다.
+    - 자동으로 데이터 요청의 중복을 제공하고, 컴포넌트 수준에서 데이터를 가져오기, 캐시 및 재검증할 수 있는 유연한 방법을 제공한다.
+    - 이전의 Next.js 버전에서 data를 fetch하려면, **getServerSideProps나 getStaticProps**를 사용해야 했으나, 좀 더 간편한 방법으로 fetch할 수 있도록 등장한 것이다. 
+    ```
+    // This request should be cached until manually invalidated.
+    // Similar to `getStaticProps`.
+    // `force-cache` is the default and can be omitted.
+    
+    // Default인 force-cache값은 기존에 저장된 캐시를 사용하겠다는 의미이다 (getStaticProps)
+    fetch(URL, { cache: 'force-cache' }) 
+
+    // This request should be refetched on every request.
+    // Similar to `getServerSideProps`.
+
+    //no-store값은 기존에 저장된 캐시를 사용하지 않고 계속해서 서버로부터 데이터를 불러오겠다는 의미이다 (getServerSideProps)
+    fetch(URL, { cache: 'no-store' })
+
+    // This request should be cached with a lifetime of 10 seconds.
+    // Similar to `getStaticProps` with the `revalidate` option.
+
+    // revalidate : 개발자가 캐시된 데이터를 사용하되, 데이터를 새로 고쳐야 할 상황에서 유용한 option이다.
+    // 즉, getStaticProps에서, 갱신을 위해 revalidate option을 부여한 것과 비슷하다. 
+    fetch(URL, { next: { revalidate: 10 } }) // 10s
+    ```
+
+### 3.5 Turbopack
+- 새로운 Rust 기반의 자바스크립트 번들링 툴입니다.
+    - webpack보다 700배 빠른 업데이트, Vite보다 10배 빠른 업데이트를 가진다고 주장합니다.
+    - 즉, Webpack보다 빠르게 번들링해주는 새로운 툴인데, 충분한 안정화 후에 살펴보아야 할 내용으로 확인됩니다.

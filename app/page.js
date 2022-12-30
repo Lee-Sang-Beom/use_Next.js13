@@ -1,5 +1,23 @@
+"use client"
+
+import axios from "axios";
+import { useEffect } from "react";
+
 const Home = () => {
-  return <div>여기는 메인 페이지입니다.</div>;
+
+  const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+  useEffect(()=>{
+    try{
+      const data = axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`)
+      console.log(data);
+    } catch(error){
+      console.log(error);
+    }
+  },[])
+  return (
+    <>
+    </>
+  )
 };
 
 export default Home;

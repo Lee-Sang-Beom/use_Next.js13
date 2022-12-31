@@ -41,6 +41,18 @@ Study - use Next.js 13
     npm i axios
     ```
 
+### 2.4 bootstrap
+
+- 프론트엔드 개발을 위한 무료 오픈소스 css 프레임워크인 bootstrap 사용을 위한 설치과정을 진행합니다.
+    ```
+    npm i bootstrap
+    ```
+    
+- 파일 시스템의 최상위 요소에 bootstrap css 파일을 import합니다.
+    ```
+    import 'bootstrap/dist/css/bootstrap.min.css';
+    ```
+
 ****
 
 ## 3. 변화

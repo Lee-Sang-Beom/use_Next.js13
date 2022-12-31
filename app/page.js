@@ -1,23 +1,32 @@
-"use client"
+"use client";
 
 import axios from "axios";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import Loading from "../component/Loading";
 
 const Home = () => {
-
   const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
-  useEffect(()=>{
-    try{
-      const data = axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`)
-      console.log(data);
-    } catch(error){
-      console.log(error);
-    }
-  },[])
+  const [movies, setMovies] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  
+  async function getMovieDatas() {
+    await axios
+      .get("/api/movies")
+      .then((res) => setMovies(res.data));
+      setIsLoading(false);
+  }
+
+  useEffect(() => {
+    getMovieDatas();
+  }, []);
+
+  console.log(movies)
   return (
-    <>
-    </>
-  )
+      <>
+        {isLoading ? 
+        <Loading/> : <>데이터 로드 완료</>}
+      </>
+  );
 };
 
 export default Home;

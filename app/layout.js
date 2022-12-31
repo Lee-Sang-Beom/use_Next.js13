@@ -1,3 +1,5 @@
+import NavBar from "../component/NavBar";
+
 export default function RootLayout({children}){
     return(
         <html>
@@ -5,7 +7,7 @@ export default function RootLayout({children}){
                 <title> 타이틀 </title>
             </head>
             <body>
-                네비게이션 바
+                <NavBar/>
                 {children}
             </body>
         </html>

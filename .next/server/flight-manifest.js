@@ -132,7 +132,11 @@ self.__RSC_MANIFEST={
     }
   },
   "__edge_ssr_module_mapping__": {},
-  "__entry_css_files__": {},
+  "__entry_css_files__": {
+    "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\layout": [
+      "static/css/_app-client_component_css_NavBar_module_css.css"
+    ]
+  },
   "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\page.js": {
     "": {
       "id": "(app-client)/./app/page.js",
@@ -261,6 +265,15 @@ self.__RSC_MANIFEST={
         "app-client-internals:app-client-internals"
       ],
       "async": false
+    }
+  },
+  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\component\\css\\NavBar.module.css": {
+    "default": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/_app-client_component_css_NavBar_module_css.css"
+      ]
     }
   }
 }

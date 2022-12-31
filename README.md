@@ -53,6 +53,12 @@ Study - use Next.js 13
     import 'bootstrap/dist/css/bootstrap.min.css';
     ```
 
+### 2.5 @next/font
+
+- google font 사용을 위한 @next/font를 설치한다
+    ```
+    npm i @next/font
+    ```
 ****
 
 ## 3. 변화
@@ -142,3 +148,15 @@ Study - use Next.js 13
 - 새로운 Rust 기반의 자바스크립트 번들링 툴입니다.
     - webpack보다 700배 빠른 업데이트, Vite보다 10배 빠른 업데이트를 가진다고 주장합니다.
     - 즉, Webpack보다 빠르게 번들링해주는 새로운 툴인데, 충분한 안정화 후에 살펴보아야 할 내용으로 확인됩니다.
+
+### 3.6 next/image
+- alt 속성을 필수로 입력하도록 함으로써 접근성을 향상시켰다.
+- 스타일 지정이 간편해졌다.
+- lazy loading이 더욱 빨라졌다.
+
+### 3.7 next/link
+- 더이상 자식요소로 `<a>`태그를 필요로 하지 않는다.
+
+### 3.8 next/font
+- `@next/font`에서는 google font를 제공한다.
+- 커스텀 폰트를 포함하여 글꼴을 자동으로 최적화한다.

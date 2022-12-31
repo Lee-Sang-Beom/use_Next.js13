@@ -133,9 +133,33 @@ self.__RSC_MANIFEST={
   },
   "__edge_ssr_module_mapping__": {},
   "__entry_css_files__": {
+    "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\page": [
+      "static/css/app/page.css"
+    ],
     "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\layout": [
-      "static/css/_app-client_component_css_NavBar_module_css.css"
+      "static/css/_app-client_app_css_Main_module_css.css",
+      "static/css/_app-client_node_modules_bootstrap_dist_css_bootstrap_min_css.css",
+      "static/css/_app-client_component_css_navbar_NavBar_module_css.css"
     ]
+  },
+  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\css\\Main.module.css": {
+    "default": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/page.css",
+        "static/css/_app-client_app_css_Main_module_css.css"
+      ]
+    }
+  },
+  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\component\\css\\loading\\Loading.module.css": {
+    "default": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/page.css"
+      ]
+    }
   },
   "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\page.js": {
     "": {
@@ -267,12 +291,21 @@ self.__RSC_MANIFEST={
       "async": false
     }
   },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\component\\css\\NavBar.module.css": {
+  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\component\\css\\navbar\\NavBar.module.css": {
     "default": {
       "id": "null",
       "name": "default",
       "chunks": [
-        "static/css/_app-client_component_css_NavBar_module_css.css"
+        "static/css/_app-client_component_css_navbar_NavBar_module_css.css"
+      ]
+    }
+  },
+  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\node_modules\\bootstrap\\dist\\css\\bootstrap.min.css": {
+    "default": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/_app-client_node_modules_bootstrap_dist_css_bootstrap_min_css.css"
       ]
     }
   }

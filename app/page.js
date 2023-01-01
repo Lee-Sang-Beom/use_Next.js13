@@ -7,10 +7,9 @@ import styles from "./css/Main.module.css";
 import { Inter } from "@next/font/google";
 
 // @next/font
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], weight: '600', preload: false });
 
 const Home = () => {
-  const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -20,25 +19,28 @@ const Home = () => {
     setIsLoading(false);
   }
 
-  console.log(movies);
   useEffect(() => {
     getMovieDatas();
   }, []);
 
   return (
-    <div className={styles.movie__mainpage}>
+    <div className={styles.movie_mainpage}>
       {isLoading ? (
         <Loading />
       ) : (
-        <div className={inter.className}>
-          {movies.map((movie) => (
-            <div>
-              <img
-                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-              />
-              <p>{movie.original_title}</p>
-            </div>
-          ))}
+        <div>
+          <h2 className={styles.popular_movies_section_title}>인기 영화</h2>
+          <div className={styles.movies_wrap}>
+            {movies.map((movie) => (
+              // 각 movie img, title을 출력
+              <div className={styles.movie} key={movie.id}>
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                />
+                <p className={inter.className}>{movie.original_title}</p>
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </div>

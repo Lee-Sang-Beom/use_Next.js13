@@ -142,7 +142,7 @@ self.__RSC_MANIFEST={
       "static/css/_app-client_component_css_navbar_NavBar_module_css.css"
     ]
   },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\node_modules\\@next\\font\\google\\target.css?{\"path\":\"app\\\\page.js\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}": {
+  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\node_modules\\@next\\font\\google\\target.css?{\"path\":\"app\\\\page.js\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":\"600\",\"preload\":false}],\"variableName\":\"inter\"}": {
     "default": {
       "id": "null",
       "name": "default",

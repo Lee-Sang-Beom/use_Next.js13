@@ -1,10 +1,11 @@
 "use client";
 
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import Loading from "../component/Loading";
 import styles from "./css/Main.module.css";
 import { Inter } from "@next/font/google";
+import Link from "next/link";
 
 // @next/font
 const inter = Inter({ subsets: ["latin"], weight: '600', preload: false });
@@ -23,6 +24,8 @@ const Home = () => {
     getMovieDatas();
   }, []);
 
+  console.log(movies)
+
   return (
     <div className={styles.movie_mainpage}>
       {isLoading ? (
@@ -34,10 +37,15 @@ const Home = () => {
             {movies.map((movie) => (
               // 각 movie img, title을 출력
               <div className={styles.movie} key={movie.id}>
-                <img
-                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                />
-                <p className={inter.className}>{movie.original_title}</p>
+                  <Link href={`/movies/${movie.id}`}>
+                    <img
+                      src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                    />
+                    <p className={inter.className}>{movie.original_title}</p>
+
+                  </Link>
+                
+                
               </div>
             ))}
           </div>

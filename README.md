@@ -144,6 +144,134 @@ Study - use Next.js 13
     fetch(URL, { next: { revalidate: 10 } }) // 10s
     ```
 
+- 해당 프로젝트에서의 실제 사용은 아래와 같다.  
+    1. `app/movies/[id]/page.js` 파일을 만든다.
+    2. app/page.js의 `<Link href="">`로 전달한 값은 DetailMovieData의 props로 전달받는다.
+        - 더 많은 양의 데이터를 전달할 경우, `app/movies/[id]/page.js` 대신, `app/movies/[...params]/page.js`로, 라우팅을 위한 폴더명을 변경한다.
+        - 그럼, 전달받은 데이터는 아래와 같이 표시된다.
+            ```
+            {
+            params: { params: [ '76600', 'Avatar%3A%20The%20Way%20of%20Water' ] }, // 여러 개의 데이터를 전달한 것을 모두 받아옴
+            searchParams: {}
+            }
+            ```
+    3. 기존의 getServerSideProps 함수 대신, react의 use함수에 별도로 정의한 getData함수를 전달한다. 이 때, getData함수에는 fetch에 필요한 정보를 인자로 전달할 수 있다.
+
+    4. getData 함수에는 fetch logic을 입력해준다.
+
+    ```
+    // app/movies/[id]/page.js
+
+    import axios from "axios";
+    import { use } from "react";
+
+    export default function DetailMovieData(props) {
+    // context.params.id가, app/page.js에서 전달한 movie.id
+    const data = use(getData(props.params.id));
+    const {
+        original_title,
+        overview,
+        homepage,
+        poster_path,
+        vote_average,
+        runtime,
+        release_date,
+    } = data.props;
+
+    return (
+        <>
+        <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} />
+        <p>제목: {original_title}</p>
+        <p>상영시간: {runtime}분</p>
+        <p>발표일: {release_date}</p>
+        </>
+    );
+    }
+
+    export async function getData(id) {
+    
+    // fetch에서, getServerSideProps와 유사하게 데이터를 받아오려면, fetch(url, {cache:'no-store}) 옵션을 부여해야 함
+    const res = await fetch(`http://localhost:3000/api/movies/${id}`, { cache: "no-store" }).then(data => data.json());
+
+    const {
+        original_title,
+        overview,
+        homepage,
+        poster_path,
+        vote_average,
+        runtime,
+        release_date,
+    } = res;
+
+
+    return {
+        props: {
+        original_title,
+        overview,
+        homepage,
+        poster_path,
+        vote_average,
+        runtime,
+        release_date,
+        },
+    };
+    }
+
+    ``` 
+
+    
+    import axios from "axios";
+    import { use } from "react";
+
+    export default function DetailMovieData(props) {
+    // context.params.id가, app/page.js에서 전달한 movie.id
+    const data = use(getData(props.params.id));
+    const {
+        original_title,
+        overview,
+        homepage,
+        poster_path,
+        vote_average,
+        runtime,
+        release_date,
+    } = data.props;
+
+    return (
+        <>
+        <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} />
+        <p>제목: {original_title}</p>
+        <p>상영시간: {runtime}분</p>
+        </>
+    );
+    }
+
+    export async function getData(id) {
+    const res = await axios.get(`http://localhost:3000/api/movies/${id}`);
+    const {
+        original_title,
+        overview,
+        homepage,
+        poster_path,
+        vote_average,
+        runtime,
+        release_date,
+    } = res.data;
+
+    return {
+        props: {
+        original_title,
+        overview,
+        homepage,
+        poster_path,
+        vote_average,
+        runtime,
+        release_date,
+        },
+    };
+    }
+
+    ```
+
 ### 3.5 Turbopack
 - 새로운 Rust 기반의 자바스크립트 번들링 툴입니다.
     - webpack보다 700배 빠른 업데이트, Vite보다 10배 빠른 업데이트를 가진다고 주장합니다.

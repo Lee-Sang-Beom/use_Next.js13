@@ -21,15 +21,24 @@ export default function DetailMovieData(props) {
         <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} />
         <div className={styles.movie_info}>
           <h1 className={styles.movie_title}>{original_title}</h1>
+
           <div>
+            ⭐
             <span className={styles.movie_vote_average}>
-              {`⭐${vote_average}`}
+              {`${vote_average}`}
             </span>
             {` / 10`}
+            <hr />
           </div>
 
-          <p className={styles.movie_runtime}>상영시간: {runtime}분</p>
-          <p className={styles.movie_release_date}>발표일: {release_date}</p>
+          <dl>
+            <dt>상영시간</dt>
+            <dd>{runtime}분</dd>
+            <dt>발표일</dt>
+            <dd>{release_date}</dd>
+            <dt>스토리</dt>
+            <dd>{overview}</dd>
+          </dl>
         </div>
       </section>
     </div>

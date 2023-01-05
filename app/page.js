@@ -1,3 +1,5 @@
+// app/page.js
+
 "use client";
 
 import axios from "axios";
@@ -8,7 +10,7 @@ import { Inter } from "@next/font/google";
 import Link from "next/link";
 
 // @next/font
-const inter = Inter({ subsets: ["latin"], weight: '600', preload: false });
+const inter = Inter({ subsets: ["latin"], weight: "600", preload: false });
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -24,7 +26,7 @@ const Home = () => {
     getMovieDatas();
   }, []);
 
-  console.log(movies)
+  console.log(movies);
 
   return (
     <div className={styles.movie_mainpage}>
@@ -37,15 +39,12 @@ const Home = () => {
             {movies.map((movie) => (
               // 각 movie img, title을 출력
               <div className={styles.movie} key={movie.id}>
-                  <Link href={`/movies/${movie.id}`}>
-                    <img
-                      src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                    />
-                    <p className={inter.className}>{movie.original_title}</p>
-
-                  </Link>
-                
-                
+                <Link href={`/movies/${movie.id}`}>
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                  />
+                  <p className={inter.className}>{movie.original_title}</p>
+                </Link>
               </div>
             ))}
           </div>

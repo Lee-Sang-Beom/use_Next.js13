@@ -1,3 +1,4 @@
+import "./css/reset.css";
 import NavBar from "../component/NavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./css/Main.module.css";

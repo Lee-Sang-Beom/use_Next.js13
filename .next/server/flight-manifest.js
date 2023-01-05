@@ -137,9 +137,10 @@ self.__RSC_MANIFEST={
       "static/css/app/page.css"
     ],
     "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\layout": [
-      "static/css/_app-client_app_css_Main_module_css.css",
       "static/css/_app-client_node_modules_bootstrap_dist_css_bootstrap_min_css.css",
-      "static/css/_app-client_component_css_navbar_NavBar_module_css.css"
+      "static/css/_app-client_component_css_navbar_NavBar_module_css.css",
+      "static/css/_app-client_app_css_Main_module_css.css",
+      "static/css/_app-client_app_css_reset_css.css"
     ]
   },
   "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\node_modules\\@next\\font\\google\\target.css?{\"path\":\"app\\\\page.js\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":\"600\",\"preload\":false}],\"variableName\":\"inter\"}": {
@@ -298,6 +299,15 @@ self.__RSC_MANIFEST={
         "app-client-internals:app-client-internals"
       ],
       "async": false
+    }
+  },
+  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\css\\reset.css": {
+    "default": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/_app-client_app_css_reset_css.css"
+      ]
     }
   },
   "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\component\\css\\navbar\\NavBar.module.css": {

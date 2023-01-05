@@ -1,3 +1,5 @@
+// app/movies/[id]/page.js
+
 import axios from "axios";
 import { use } from "react";
 
@@ -25,7 +27,10 @@ export default function DetailMovieData(props) {
 }
 
 export async function getData(id) {
-  const res = await fetch(`http://localhost:3000/api/movies/${id}`, { cache: "no-store" }).then(data => data.json());
+  // fetch에서, getServerSideProps와 유사하게 데이터를 받아오려면, fetch(url, {cache:'no-store}) 옵션을 부여해야 함
+  const res = await fetch(`http://localhost:3000/api/movies/${id}`, {
+    cache: "no-store",
+  }).then((data) => data.json());
 
   const {
     original_title,
@@ -36,7 +41,6 @@ export async function getData(id) {
     runtime,
     release_date,
   } = res;
-
 
   return {
     props: {

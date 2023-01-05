@@ -159,118 +159,246 @@ Study - use Next.js 13
 
     4. getData 함수에는 fetch logic을 입력해준다.
 
-    ```
-    // app/movies/[id]/page.js
+        4.1 `[id]로 단일 데이터를 전달받는 경우`
+        ```
+        // app/movies/[id]/page.js
 
-    import axios from "axios";
-    import { use } from "react";
+        import axios from "axios";
+        import { use } from "react";
 
-    export default function DetailMovieData(props) {
-    // context.params.id가, app/page.js에서 전달한 movie.id
-    const data = use(getData(props.params.id));
-    const {
-        original_title,
-        overview,
-        homepage,
-        poster_path,
-        vote_average,
-        runtime,
-        release_date,
-    } = data.props;
+        export default function DetailMovieData(props) {
+        // context.params.id가, app/page.js에서 전달한 movie.id
+        const data = use(getData(props.params.id));
+        const {
+            original_title,
+            overview,
+            homepage,
+            poster_path,
+            vote_average,
+            runtime,
+            release_date,
+        } = data.props;
 
-    return (
-        <>
-        <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} />
-        <p>제목: {original_title}</p>
-        <p>상영시간: {runtime}분</p>
-        <p>발표일: {release_date}</p>
-        </>
-    );
-    }
+        return (
+            <>
+            <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} />
+            <p>제목: {original_title}</p>
+            <p>상영시간: {runtime}분</p>
+            <p>발표일: {release_date}</p>
+            </>
+        );
+        }
 
-    export async function getData(id) {
-    
-    // fetch에서, getServerSideProps와 유사하게 데이터를 받아오려면, fetch(url, {cache:'no-store}) 옵션을 부여해야 함
-    const res = await fetch(`http://localhost:3000/api/movies/${id}`, { cache: "no-store" }).then(data => data.json());
+        export async function getData(id) {
+        
+        // fetch에서, getServerSideProps와 유사하게 데이터를 받아오려면, fetch(url, {cache:'no-store}) 옵션을 부여해야 함
+        const res = await fetch(`http://localhost:3000/api/movies/${id}`, { cache: "no-store" }).then(data => data.json());
 
-    const {
-        original_title,
-        overview,
-        homepage,
-        poster_path,
-        vote_average,
-        runtime,
-        release_date,
-    } = res;
+        const {
+            original_title,
+            overview,
+            homepage,
+            poster_path,
+            vote_average,
+            runtime,
+            release_date,
+        } = res;
 
 
-    return {
-        props: {
-        original_title,
-        overview,
-        homepage,
-        poster_path,
-        vote_average,
-        runtime,
-        release_date,
-        },
-    };
-    }
+        return {
+            props: {
+            original_title,
+            overview,
+            homepage,
+            poster_path,
+            vote_average,
+            runtime,
+            release_date,
+            },
+        };
+        }
+        ```
 
-    ``` 
+        ```
+        // app/page.js
 
-    
-    import axios from "axios";
-    import { use } from "react";
+        "use client";
 
-    export default function DetailMovieData(props) {
-    // context.params.id가, app/page.js에서 전달한 movie.id
-    const data = use(getData(props.params.id));
-    const {
-        original_title,
-        overview,
-        homepage,
-        poster_path,
-        vote_average,
-        runtime,
-        release_date,
-    } = data.props;
+        import axios from "axios";
+        import { useState, useEffect, Suspense } from "react";
+        import Loading from "../component/Loading";
+        import styles from "./css/Main.module.css";
+        import { Inter } from "@next/font/google";
+        import Link from "next/link";
 
-    return (
-        <>
-        <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} />
-        <p>제목: {original_title}</p>
-        <p>상영시간: {runtime}분</p>
-        </>
-    );
-    }
+        // @next/font
+        const inter = Inter({ subsets: ["latin"], weight: "600", preload: false });
 
-    export async function getData(id) {
-    const res = await axios.get(`http://localhost:3000/api/movies/${id}`);
-    const {
-        original_title,
-        overview,
-        homepage,
-        poster_path,
-        vote_average,
-        runtime,
-        release_date,
-    } = res.data;
+        const Home = () => {
+        const [movies, setMovies] = useState([]);
+        const [isLoading, setIsLoading] = useState(true);
 
-    return {
-        props: {
-        original_title,
-        overview,
-        homepage,
-        poster_path,
-        vote_average,
-        runtime,
-        release_date,
-        },
-    };
-    }
+        async function getMovieDatas() {
+            const { results } = await axios.get("/api/movies").then((res) => res.data);
+            setMovies(results);
+            setIsLoading(false);
+        }
 
-    ```
+        useEffect(() => {
+            getMovieDatas();
+        }, []);
+
+        console.log(movies);
+
+        return (
+            <div className={styles.movie_mainpage}>
+            {isLoading ? (
+                <Loading />
+            ) : (
+                <div>
+                <h2 className={styles.popular_movies_section_title}>인기 영화</h2>
+                <div className={styles.movies_wrap}>
+                    {movies.map((movie) => (
+                    // 각 movie img, title을 출력
+                    <div className={styles.movie} key={movie.id}>
+                        <Link href={`/movies/${movie.id}`}>
+                        <img
+                            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                        />
+                        <p className={inter.className}>{movie.original_title}</p>
+                        </Link>
+                    </div>
+                    ))}
+                </div>
+                </div>
+            )}
+            </div>
+        );
+        };
+
+        export default Home;
+        ```
+
+        4.2 `[...params]로 여러 데이터를 전달받는 경우`
+        ```
+        // app/movies/[...params]/page.js
+
+        import axios from "axios";
+        import { use } from "react";
+
+        // app/page.js의 Link component에 전달된 movie id와 original_title 내용이 props의 params에 전달
+        // [id]로만 폴더명을 기재하고, 하나의 param만 전달되면, props.params.id가, app/page.js에서 전달한 movie.id가 됨
+        export default function DetailMovieData(props) {
+
+        const movie_id = props.params.params[0];
+        const data = use(getData(movie_id));
+        const {
+            original_title,
+            overview,
+            homepage,
+            poster_path,
+            vote_average,
+            runtime,
+            release_date,
+        } = data.props;
+
+        return (
+            <>
+            <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} />
+            <p>제목: {original_title}</p>
+            <p>상영시간: {runtime}분</p>
+            <p>발표일: {release_date}</p>
+            </>
+        );
+        }
+
+        export async function getData(id) {
+        const res = await fetch(`http://localhost:3000/api/movies/${id}`, { cache: "no-store" }).then(data => data.json());
+
+        const {
+            original_title,
+            overview,
+            homepage,
+            poster_path,
+            vote_average,
+            runtime,
+            release_date,
+        } = res;
+
+
+        return {
+            props: {
+            original_title,
+            overview,
+            homepage,
+            poster_path,
+            vote_average,
+            runtime,
+            release_date,
+            },
+        };
+        }
+        ```
+
+        ```
+        // app/page.js
+
+        "use client";
+
+        import axios from "axios";
+        import { useState, useEffect, Suspense } from "react";
+        import Loading from "../component/Loading";
+        import styles from "./css/Main.module.css";
+        import { Inter } from "@next/font/google";
+        import Link from "next/link";
+
+        // @next/font
+        const inter = Inter({ subsets: ["latin"], weight: "600", preload: false });
+
+        const Home = () => {
+        const [movies, setMovies] = useState([]);
+        const [isLoading, setIsLoading] = useState(true);
+
+        async function getMovieDatas() {
+            const { results } = await axios.get("/api/movies").then((res) => res.data);
+            setMovies(results);
+            setIsLoading(false);
+        }
+
+        useEffect(() => {
+            getMovieDatas();
+        }, []);
+
+        console.log(movies);
+
+        return (
+            <div className={styles.movie_mainpage}>
+            {isLoading ? (
+                <Loading />
+            ) : (
+                <div>
+                <h2 className={styles.popular_movies_section_title}>인기 영화</h2>
+                <div className={styles.movies_wrap}>
+                    {movies.map((movie) => (
+                    // 각 movie img, title을 출력
+                    <div className={styles.movie} key={movie.id}>
+                        <Link href={`/movies/${movie.id}/${movie.original_title}`}>
+                        <img
+                            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                        />
+                        <p className={inter.className}>{movie.original_title}</p>
+                        </Link>
+                    </div>
+                    ))}
+                </div>
+                </div>
+            )}
+            </div>
+        );
+        };
+
+        export default Home;
+        ```
 
 ### 3.5 Turbopack
 - 새로운 Rust 기반의 자바스크립트 번들링 툴입니다.

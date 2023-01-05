@@ -192,7 +192,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-/******/ 		__webpack_require__.h = function() { return "8ed3c0fc701a9ae4"; }
+/******/ 		__webpack_require__.h = function() { return "7350ea82b229dd1d"; }
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
@@ -798,7 +798,7 @@
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.miniCss = function(chunkId, promises) {
-/******/ 			var cssChunks = {"_app-client_app_css_reset_css":1,"_app-client_app_css_Main_module_css":1,"_app-client_component_css_navbar_NavBar_module_css":1,"_app-client_node_modules_bootstrap_dist_css_bootstrap_min_css":1};
+/******/ 			var cssChunks = {"_app-client_app_css_reset_css":1,"_app-client_node_modules_semantic-ui-css_semantic_min_css":1,"_app-client_component_css_navbar_NavBar_module_css":1,"_app-client_node_modules_bootstrap_dist_css_bootstrap_min_css":1,"_app-client_app_css_Main_module_css":1,"_app-client_app_movies_id_css_detailMovie_module_css":1};
 /******/ 			if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 			else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 				promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(function() {

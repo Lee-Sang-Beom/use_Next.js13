@@ -109,6 +109,9 @@
   font-size: 1.5rem;
 }
 @media screen and (max-width: 768px) {
+  .movies_wrap .movie {
+    margin-bottom: 2rem;
+  }
   .movies_wrap .movie img {
     width: 80%;
   }

@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+}
+.container section {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  gap: 0 3rem;
+}
+.container section img {
+  width: 400px;
+  border-radius: 1rem;
+}
+.container section .movie_info .movie_title {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container section .movie_info .movie_vote_average {
+  color: red;
+}/*# sourceMappingURL=detailMovie.module.css.map */

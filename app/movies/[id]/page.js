@@ -1,11 +1,10 @@
-// app/movies/[id]/page.js
-
-import axios from "axios";
 import { use } from "react";
+import styles from "./css/detailMovie.module.css";
 
 export default function DetailMovieData(props) {
   // context.params.id가, app/page.js에서 전달한 movie.id
   const data = use(getData(props.params.id));
+
   const {
     original_title,
     overview,
@@ -17,12 +16,23 @@ export default function DetailMovieData(props) {
   } = data.props;
 
   return (
-    <>
-      <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} />
-      <p>제목: {original_title}</p>
-      <p>상영시간: {runtime}분</p>
-      <p>발표일: {release_date}</p>
-    </>
+    <div className={styles.container}>
+      <section>
+        <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} />
+        <div className={styles.movie_info}>
+          <h1 className={styles.movie_title}>{original_title}</h1>
+          <div>
+            <span className={styles.movie_vote_average}>
+              {`⭐${vote_average}`}
+            </span>
+            {` / 10`}
+          </div>
+
+          <p className={styles.movie_runtime}>상영시간: {runtime}분</p>
+          <p className={styles.movie_release_date}>발표일: {release_date}</p>
+        </div>
+      </section>
+    </div>
   );
 }
 

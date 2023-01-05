@@ -1,3 +1,4 @@
+
 // mixin
 @mixin popular_movies_section_title_bar($left_value) {
     content: ' ';
@@ -96,6 +97,9 @@
         }
 
         @media screen and (max-width: 768px) {
+            
+            margin-bottom: 2rem;
+
             img {
                width: 80%;
             }

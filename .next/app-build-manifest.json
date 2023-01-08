@@ -14,6 +14,7 @@
     "/movies/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
+      "static/css/app/movies/[id]/page.css",
       "static/chunks/app/movies/[id]/page.js"
     ]
   }

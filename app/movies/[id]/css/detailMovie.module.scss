@@ -9,11 +9,45 @@
         padding: 2rem;
         gap: 0 3rem;
 
-        
-        img {
-            width: 400px;
-            border-radius: 1rem;
+        .movie_poster_wrap{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            img {
+                width: 400px;
+                border-radius: 1rem;
+            }
+
+            .move_backbtn {
+                width: 30%;
+
+                border: 1px solid #fff;
+                border-radius: 0.3rem;
+                background-color: black;
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: #fff;
+                
+                margin-top: 0.6rem;
+                padding: 0.4rem 0;
+    
+                transition: all 0.3s ease;
+            }
+    
+            .move_backbtn:hover {
+                background-color: rgb(255, 255, 255);
+                color: black;
+                transform: scale(1.02);
+                width: 100%;
+
+                letter-spacing: 0.5rem;
+            }
+    
         }
+        
 
         .movie_info {
             .movie_title {
@@ -24,7 +58,7 @@
 
             }
 
-            .movie_vote_average{
+            .movie_vote_average {
                 color: red;
                 font-weight: 600;
                 font-size: 1.3rem;
@@ -34,10 +68,13 @@
             }
         }
 
+
+
+
         @media screen and (max-width: 768px) {
             flex-direction: column;
 
-            .movie_info{
+            .movie_info {
                 margin-top: 2rem;
             }
         }

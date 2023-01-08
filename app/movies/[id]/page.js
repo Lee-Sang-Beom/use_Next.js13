@@ -1,3 +1,5 @@
+"use client";
+import { useRouter } from "next/router";
 import { use } from "react";
 import styles from "./css/detailMovie.module.css";
 
@@ -15,10 +17,20 @@ export default function DetailMovieData(props) {
     release_date,
   } = data.props;
 
+  function moveBackPage() {
+    window.history.back();
+  }
+
   return (
     <div className={styles.container}>
       <section>
-        <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} />
+        <div className={styles.movie_poster_wrap}>
+          <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} />
+          <button className={styles.move_backbtn} onClick={moveBackPage}>
+            뒤로가기
+          </button>
+        </div>
+
         <div className={styles.movie_info}>
           <h1 className={styles.movie_title}>{original_title}</h1>
 

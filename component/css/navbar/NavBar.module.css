@@ -1,5 +1,44 @@
-.nav {
+.nav_wrap {
   background-color: #000000;
   color: #ffffff;
-  height: 30px;
+  height: 100px;
+  display: flex;
+}
+.nav_wrap .nav_logo {
+  flex-basis: 10%;
+  height: 100%;
+  cursor: pointer;
+}
+.nav_wrap ul {
+  display: flex;
+  flex-basis: 90%;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.nav_wrap ul li {
+  flex-basis: 20%;
+  height: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: font-size 0.3s;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .nav_wrap ul li {
+    flex-basis: 30%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .nav_wrap ul li {
+    flex-basis: 40%;
+  }
+}
+.nav_wrap ul li:hover {
+  font-size: 20px;
+  background-color: #141414;
 }/*# sourceMappingURL=NavBar.module.css.map */

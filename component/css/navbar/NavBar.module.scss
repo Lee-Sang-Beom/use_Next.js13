@@ -41,11 +41,11 @@
             li {
                 color: white;
             }
-        }
 
-        a:hover {
-            font-size: 20px;
-            background-color: #141414;
+            &:hover {
+                font-size: 20px;
+                background-color: #141414;
+            }
         }
     }
 }

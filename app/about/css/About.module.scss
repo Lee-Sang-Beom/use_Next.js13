@@ -1,0 +1,87 @@
+// mixin
+@mixin about_section_title_bar($left_value) {
+    content: ' ';
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: $left_value;
+    width: 1px;
+    height: 100%;
+    opacity: 0.6;
+}
+
+
+.about_mainpage {
+    width: 100%;
+    height: 100%;
+
+    .about_section_title {
+        margin: 2rem 0;
+        text-align: center;
+        position: relative;
+        margin-bottom: 2rem;
+        font-weight: 800;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .about_section_title::before {
+        @include about_section_title_bar(41%);
+    }
+
+    .about_section_title::after {
+        @include about_section_title_bar(59%);
+    }
+
+    // width <= 1024px
+    @media screen and (max-width: 1024px) {
+        .about_section_title::before {
+            @include about_section_title_bar(35%);
+        }
+
+        .about_section_title::after {
+            @include about_section_title_bar(65%);
+        }
+    }
+
+    // width <= 480px
+    @media screen and (max-width: 480px) {
+        .about_section_title_bar::before {
+            @include about_section_title_bar(30%);
+        }
+
+        .about_section_title_bar::after {
+            @include about_section_title_bar(70%);
+        }
+    }
+
+}
+
+.about_section_wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+
+
+    .about_section_left_box {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .about_section_guide_popular {
+            background-color: antiquewhite;
+        }
+    }
+
+    .about_section_right_box {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

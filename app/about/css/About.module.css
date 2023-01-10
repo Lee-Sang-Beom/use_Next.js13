@@ -1,0 +1,100 @@
+.about_mainpage {
+  width: 100%;
+  height: 100%;
+}
+.about_mainpage .about_section_title {
+  margin: 2rem 0;
+  text-align: center;
+  position: relative;
+  margin-bottom: 2rem;
+  font-weight: 800;
+}
+.about_mainpage p {
+  text-align: center;
+}
+.about_mainpage .about_section_title::before {
+  content: " ";
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 41%;
+  width: 1px;
+  height: 100%;
+  opacity: 0.6;
+}
+.about_mainpage .about_section_title::after {
+  content: " ";
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 59%;
+  width: 1px;
+  height: 100%;
+  opacity: 0.6;
+}
+@media screen and (max-width: 1024px) {
+  .about_mainpage .about_section_title::before {
+    content: " ";
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 1px;
+    height: 100%;
+    opacity: 0.6;
+  }
+  .about_mainpage .about_section_title::after {
+    content: " ";
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 65%;
+    width: 1px;
+    height: 100%;
+    opacity: 0.6;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about_mainpage .about_section_title_bar::before {
+    content: " ";
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 30%;
+    width: 1px;
+    height: 100%;
+    opacity: 0.6;
+  }
+  .about_mainpage .about_section_title_bar::after {
+    content: " ";
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 70%;
+    width: 1px;
+    height: 100%;
+    opacity: 0.6;
+  }
+}
+
+.about_section_wrap {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+.about_section_wrap .about_section_left_box {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about_section_wrap .about_section_left_box .about_section_guide_popular {
+  background-color: antiquewhite;
+}
+.about_section_wrap .about_section_right_box {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=About.module.css.map */

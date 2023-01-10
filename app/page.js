@@ -33,7 +33,7 @@ const Home = () => {
       {isLoading ? (
         <Loading />
       ) : (
-        <div>
+        <section>
           <h2 className={styles.popular_movies_section_title}>인기 영화</h2>
           <div className={styles.movies_wrap}>
             {movies.map((movie) => (
@@ -49,7 +49,7 @@ const Home = () => {
               </div>
             ))}
           </div>
-        </div>
+        </section>
       )}
     </div>
   );

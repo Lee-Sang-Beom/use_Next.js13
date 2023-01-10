@@ -1,5 +1,57 @@
 self.__RSC_MANIFEST={
   "__ssr_module_mapping__": {
+    "(app-client)/./app/page.js": {
+      "": {
+        "id": "(sc_client)/./app/page.js",
+        "name": "",
+        "chunks": [
+          "app/page:app/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./app/page.js",
+        "name": "*",
+        "chunks": [
+          "app/page:app/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/page.js",
+        "name": "default",
+        "chunks": [
+          "app/page:app/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/link.js": {
+      "": {
+        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
+        "name": "",
+        "chunks": [
+          "app/layout:app/layout"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
+        "name": "*",
+        "chunks": [
+          "app/layout:app/layout"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
+        "name": "default",
+        "chunks": [
+          "app/layout:app/layout"
+        ],
+        "async": false
+      }
+    },
     "(app-client)/./styles/img/movieLogo.jpg": {
       "": {
         "id": "(sc_client)/./styles/img/movieLogo.jpg",
@@ -48,58 +100,6 @@ self.__RSC_MANIFEST={
         "name": "default",
         "chunks": [
           "app/layout:app/layout"
-        ],
-        "async": false
-      }
-    },
-    "(app-client)/./node_modules/next/dist/client/link.js": {
-      "": {
-        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
-        "name": "",
-        "chunks": [
-          "app/page:app/page"
-        ],
-        "async": false
-      },
-      "*": {
-        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
-        "name": "*",
-        "chunks": [
-          "app/page:app/page"
-        ],
-        "async": false
-      },
-      "default": {
-        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
-        "name": "default",
-        "chunks": [
-          "app/page:app/page"
-        ],
-        "async": false
-      }
-    },
-    "(app-client)/./app/page.js": {
-      "": {
-        "id": "(sc_client)/./app/page.js",
-        "name": "",
-        "chunks": [
-          "app/page:app/page"
-        ],
-        "async": false
-      },
-      "*": {
-        "id": "(sc_client)/./app/page.js",
-        "name": "*",
-        "chunks": [
-          "app/page:app/page"
-        ],
-        "async": false
-      },
-      "default": {
-        "id": "(sc_client)/./app/page.js",
-        "name": "default",
-        "chunks": [
-          "app/page:app/page"
         ],
         "async": false
       }
@@ -259,84 +259,6 @@ self.__RSC_MANIFEST={
       "static/css/_app-client_app_css_reset_css.css"
     ]
   },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\styles\\img\\movieLogo.jpg": {
-    "": {
-      "id": "(app-client)/./styles/img/movieLogo.jpg",
-      "name": "",
-      "chunks": [
-        "app/layout:app/layout"
-      ],
-      "async": false
-    },
-    "*": {
-      "id": "(app-client)/./styles/img/movieLogo.jpg",
-      "name": "*",
-      "chunks": [
-        "app/layout:app/layout"
-      ],
-      "async": false
-    },
-    "default": {
-      "id": "(app-client)/./styles/img/movieLogo.jpg",
-      "name": "default",
-      "chunks": [
-        "app/layout:app/layout"
-      ],
-      "async": false
-    }
-  },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\node_modules\\next\\dist\\client\\image.js": {
-    "": {
-      "id": "(app-client)/./node_modules/next/dist/client/image.js",
-      "name": "",
-      "chunks": [
-        "app/layout:app/layout"
-      ],
-      "async": false
-    },
-    "*": {
-      "id": "(app-client)/./node_modules/next/dist/client/image.js",
-      "name": "*",
-      "chunks": [
-        "app/layout:app/layout"
-      ],
-      "async": false
-    },
-    "default": {
-      "id": "(app-client)/./node_modules/next/dist/client/image.js",
-      "name": "default",
-      "chunks": [
-        "app/layout:app/layout"
-      ],
-      "async": false
-    }
-  },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\node_modules\\next\\dist\\client\\link.js": {
-    "": {
-      "id": "(app-client)/./node_modules/next/dist/client/link.js",
-      "name": "",
-      "chunks": [
-        "app/page:app/page"
-      ],
-      "async": false
-    },
-    "*": {
-      "id": "(app-client)/./node_modules/next/dist/client/link.js",
-      "name": "*",
-      "chunks": [
-        "app/page:app/page"
-      ],
-      "async": false
-    },
-    "default": {
-      "id": "(app-client)/./node_modules/next/dist/client/link.js",
-      "name": "default",
-      "chunks": [
-        "app/page:app/page"
-      ],
-      "async": false
-    }
-  },
   "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\node_modules\\semantic-ui-css\\semantic.min.css": {
     "default": {
       "id": "null",
@@ -396,6 +318,84 @@ self.__RSC_MANIFEST={
       "name": "default",
       "chunks": [
         "app/page:app/page"
+      ],
+      "async": false
+    }
+  },
+  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\node_modules\\next\\dist\\client\\link.js": {
+    "": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "",
+      "chunks": [
+        "app/layout:app/layout"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "*",
+      "chunks": [
+        "app/layout:app/layout"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "default",
+      "chunks": [
+        "app/layout:app/layout"
+      ],
+      "async": false
+    }
+  },
+  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\styles\\img\\movieLogo.jpg": {
+    "": {
+      "id": "(app-client)/./styles/img/movieLogo.jpg",
+      "name": "",
+      "chunks": [
+        "app/layout:app/layout"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./styles/img/movieLogo.jpg",
+      "name": "*",
+      "chunks": [
+        "app/layout:app/layout"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./styles/img/movieLogo.jpg",
+      "name": "default",
+      "chunks": [
+        "app/layout:app/layout"
+      ],
+      "async": false
+    }
+  },
+  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\node_modules\\next\\dist\\client\\image.js": {
+    "": {
+      "id": "(app-client)/./node_modules/next/dist/client/image.js",
+      "name": "",
+      "chunks": [
+        "app/layout:app/layout"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./node_modules/next/dist/client/image.js",
+      "name": "*",
+      "chunks": [
+        "app/layout:app/layout"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./node_modules/next/dist/client/image.js",
+      "name": "default",
+      "chunks": [
+        "app/layout:app/layout"
       ],
       "async": false
     }

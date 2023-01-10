@@ -93,11 +93,10 @@
 
         p {
             padding-top: 0.5rem;
-            font-size: 1.5rem;
+            font-size: 1.1rem;
         }
 
         @media screen and (max-width: 768px) {
-            
             margin-bottom: 2rem;
 
             img {
@@ -105,13 +104,13 @@
             }
     
             p{
-                font-size: 1rem;
+                font-size: 0.9rem;
             }
         }
 
         @media screen and (max-width: 480px) {
             p{
-                font-size: 0.8rem;
+                font-size: 0.7rem;
             }
         }
     }

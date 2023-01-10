@@ -106,7 +106,7 @@
 }
 .movies_wrap .movie p {
   padding-top: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 @media screen and (max-width: 768px) {
   .movies_wrap .movie {
@@ -116,12 +116,12 @@
     width: 80%;
   }
   .movies_wrap .movie p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 @media screen and (max-width: 480px) {
   .movies_wrap .movie p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 }
 @media screen and (max-width: 1024px) {

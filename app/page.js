@@ -28,8 +28,6 @@ const Home = () => {
     getMovieDatas();
   }, []);
 
-  console.log(movies);
-
   return (
     <div className={styles.movie_mainpage}>
       {isLoading ? (
@@ -43,6 +41,7 @@ const Home = () => {
               <div className={styles.movie} key={movie.id}>
                 <Link href={`/movies/${movie.id}`}>
                   <img
+                    alt="movie poster"
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                   />
                   <p className={inter.className}>{movie.original_title}</p>

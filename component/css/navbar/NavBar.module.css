@@ -18,10 +18,9 @@
   flex-direction: row-reverse;
   align-items: center;
 }
-.nav_wrap ul li {
+.nav_wrap ul a {
   flex-basis: 20%;
   height: 100%;
-  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,16 +28,19 @@
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {
-  .nav_wrap ul li {
+  .nav_wrap ul a {
     flex-basis: 30%;
   }
 }
 @media screen and (max-width: 480px) {
-  .nav_wrap ul li {
+  .nav_wrap ul a {
     flex-basis: 40%;
   }
 }
-.nav_wrap ul li:hover {
+.nav_wrap ul a li {
+  color: white;
+}
+.nav_wrap ul a:hover {
   font-size: 20px;
   background-color: #141414;
 }/*# sourceMappingURL=NavBar.module.css.map */

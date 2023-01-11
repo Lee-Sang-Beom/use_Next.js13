@@ -79,13 +79,18 @@
 
 .about_section_wrap {
   display: flex;
+  justify-content: center;
   width: 100%;
   height: 100%;
-  justify-content: center;
 }
-.about_section_wrap .about_section_left_box {
-  width: 45%;
-  margin: 3% 1%;
+.about_section_wrap a {
+  width: 40%;
+  height: 50%;
+  display: flex;
+  margin: 0 1rem;
+}
+.about_section_wrap a .about_section_left_box {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,12 +100,11 @@
   font-size: 1.5rem;
   font-weight: 800;
 }
-.about_section_wrap .about_section_left_box:hover {
+.about_section_wrap a .about_section_left_box:hover {
   background-color: #000;
 }
-.about_section_wrap .about_section_right_box {
-  width: 45%;
-  margin: 3% 1%;
+.about_section_wrap a .about_section_right_box {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

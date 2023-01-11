@@ -60,45 +60,45 @@
 }
 
 .about_section_wrap {
+
     display: flex;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    justify-content: center;
 
-
-    .about_section_left_box {
-        width: 45%;
-        margin: 3% 1%;
+    a {
+        width: 40%;
+        height: 50%;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        margin: 0 1rem;
 
-        transition: all 0.5s;
 
-        background-color: rgb(36, 36, 36);
-        color: white;
-        font-size: 1.5rem;
-        font-weight: 800;
-        
+        .about_section_left_box {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-        &:hover{
-            background-color: #000;
+            transition: all 0.5s;
+
+            background-color: rgb(36, 36, 36);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 800;
+
+            &:hover {
+                background-color: #000;
+            }
         }
 
-        // .newTag{
-        //     margin-top: 0.4rem;
-        //     color: white;
-        // }
+        .about_section_right_box {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aquamarine;
+        }
     }
 
-    .about_section_right_box {
-        width: 45%;
-        margin: 3% 1%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: aquamarine;
-
-    }
 
 }

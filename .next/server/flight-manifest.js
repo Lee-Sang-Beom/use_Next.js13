@@ -208,6 +208,32 @@ self.__RSC_MANIFEST={
         "async": false
       }
     },
+    "(app-client)/./app/about/page.js": {
+      "": {
+        "id": "(sc_client)/./app/about/page.js",
+        "name": "",
+        "chunks": [
+          "app/about/page:app/about/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./app/about/page.js",
+        "name": "*",
+        "chunks": [
+          "app/about/page:app/about/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/about/page.js",
+        "name": "default",
+        "chunks": [
+          "app/about/page:app/about/page"
+        ],
+        "async": false
+      }
+    },
     "(app-client)/./app/movies/[id]/page.js": {
       "": {
         "id": "(sc_client)/./app/movies/[id]/page.js",
@@ -241,32 +267,6 @@ self.__RSC_MANIFEST={
         ],
         "async": false
       }
-    },
-    "(app-client)/./app/about/page.js": {
-      "": {
-        "id": "(sc_client)/./app/about/page.js",
-        "name": "",
-        "chunks": [
-          "app/about/page:app/about/page"
-        ],
-        "async": false
-      },
-      "*": {
-        "id": "(sc_client)/./app/about/page.js",
-        "name": "*",
-        "chunks": [
-          "app/about/page:app/about/page"
-        ],
-        "async": false
-      },
-      "default": {
-        "id": "(sc_client)/./app/about/page.js",
-        "name": "default",
-        "chunks": [
-          "app/about/page:app/about/page"
-        ],
-        "async": false
-      }
     }
   },
   "__edge_ssr_module_mapping__": {},
@@ -274,11 +274,11 @@ self.__RSC_MANIFEST={
     "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\page": [
       "static/css/app/page.css"
     ],
-    "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\movies\\[id]\\page": [
-      "static/css/app/movies/[id]/page.css"
-    ],
     "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\about\\page": [
       "static/css/app/about/page.css"
+    ],
+    "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\movies\\[id]\\page": [
+      "static/css/app/movies/[id]/page.css"
     ],
     "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\layout": [
       "static/css/_app-client_app_css_Main_module_css.css",
@@ -533,6 +533,41 @@ self.__RSC_MANIFEST={
       "async": false
     }
   },
+  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\about\\css\\About.module.css": {
+    "default": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/about/page.css"
+      ]
+    }
+  },
+  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\about\\page.js": {
+    "": {
+      "id": "(app-client)/./app/about/page.js",
+      "name": "",
+      "chunks": [
+        "app/about/page:app/about/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./app/about/page.js",
+      "name": "*",
+      "chunks": [
+        "app/about/page:app/about/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./app/about/page.js",
+      "name": "default",
+      "chunks": [
+        "app/about/page:app/about/page"
+      ],
+      "async": false
+    }
+  },
   "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\movies\\[id]\\css\\detailMovie.module.css": {
     "default": {
       "id": "null",
@@ -572,41 +607,6 @@ self.__RSC_MANIFEST={
       "name": "getData",
       "chunks": [
         "app/movies/[id]/page:app/movies/[id]/page"
-      ],
-      "async": false
-    }
-  },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\about\\css\\About.module.css": {
-    "default": {
-      "id": "null",
-      "name": "default",
-      "chunks": [
-        "static/css/app/about/page.css"
-      ]
-    }
-  },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\about\\page.js": {
-    "": {
-      "id": "(app-client)/./app/about/page.js",
-      "name": "",
-      "chunks": [
-        "app/about/page:app/about/page"
-      ],
-      "async": false
-    },
-    "*": {
-      "id": "(app-client)/./app/about/page.js",
-      "name": "*",
-      "chunks": [
-        "app/about/page:app/about/page"
-      ],
-      "async": false
-    },
-    "default": {
-      "id": "(app-client)/./app/about/page.js",
-      "name": "default",
-      "chunks": [
-        "app/about/page:app/about/page"
       ],
       "async": false
     }

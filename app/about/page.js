@@ -6,7 +6,7 @@ import styles from "./css/About.module.css";
 const About = () => {
   const onMouseOverPopular = (e) => {
     e.target.style.borderRadius = "5rem";
-    e.target.style.fontSize = "1rem";
+    e.target.style.fontSize = "1.03rem";
     e.target.textContent = "현재 인기 있는 영화의 목록을 출력합니다.";
 
     // const currentTag = document.querySelector(
@@ -27,7 +27,7 @@ const About = () => {
   const onMouseLeavePopular = (e) => {
     e.target.style.borderRadius = "0rem";
     e.target.textContent = "Popular";
-    e.target.style.fontSize = "1.5rem";
+    e.target.style.fontSize = "1.2rem";
   };
 
   return (

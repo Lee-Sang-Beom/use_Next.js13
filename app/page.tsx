@@ -8,6 +8,7 @@ import Loading from "../component/Loading";
 import styles from "./css/Main.module.css";
 import { Inter } from "@next/font/google";
 import Link from "next/link";
+import { useQuery } from "react-query";
 
 interface MovieData {
   adult: Boolean;
@@ -29,36 +30,48 @@ interface MovieData {
 // @next/font
 const inter = Inter({ subsets: ["latin"], weight: "600", preload: false });
 
-// api key (test)
-const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
-
 const Home = () => {
   const [movies, setMovies] = useState<MovieData[]>([]);
-  const [isLoading, setIsLoading] = useState<Boolean>(true);
+  // const [isLoading, setIsLoading] = useState<Boolean>(true); // useQuery 사용 시, isLoading이 필요없음
 
-  async function getMovieDatas() {
-    const { results } = await axios
-      .get(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`)
-      .then((res) => res.data);
+  const fetchMovieList = () => {
+    return axios.get(
+      `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.NEXT_PUBLIC_API_KEY}`
+    );
+  };
 
-    console.log(results);
-    setMovies(results);
-    setIsLoading(false);
+  const { isLoading, status, data, error } = useQuery(
+    "popluar_movies_data",
+    fetchMovieList,
+    {
+      refetchOnWindowFocus: false,
+      enabled: true,
+      retry: 0,
+      onSuccess: (data) => {
+        setMovies(data.data.results);
+        // setIsLoading(false);
+        // 데이터를 받아오면 로딩 정지
+      },
+      onError: (e: Error) => {
+        // 실패시 호출 (401, 404 같은 error가 아니라 정말 api 호출이 실패한 경우만 호출됩니다.)
+        // 강제로 에러 발생시키려면 api단에서 throw Error 날립니다.
+        // (참조: https://react-query.tanstack.com/guides/query-functions#usage-with-fetch-and-other-clients-that-do-not-throw-by-default)
+        console.log(e.message);
+      },
+    }
+  );
+
+  if (isLoading) {
+    return <Loading />;
   }
-
-  useEffect(() => {
-    getMovieDatas();
-  }, []);
 
   return (
     <div className={styles.movie_mainpage}>
-      {isLoading ? (
-        <Loading />
-      ) : (
-        <section>
-          <h2 className={styles.popular_movies_section_title}>인기 영화</h2>
-          <div className={styles.movies_wrap}>
-            {movies.map((movie) => (
+      <section>
+        <h2 className={styles.popular_movies_section_title}>인기 영화</h2>
+        <div className={styles.movies_wrap}>
+          {movies &&
+            movies.map((movie) => (
               // 각 movie img, title을 출력
               <div className={styles.movie} key={movie.id}>
                 <Link href={`/movies/${movie.id}`}>
@@ -70,9 +83,8 @@ const Home = () => {
                 </Link>
               </div>
             ))}
-          </div>
-        </section>
-      )}
+        </div>
+      </section>
     </div>
   );
 };

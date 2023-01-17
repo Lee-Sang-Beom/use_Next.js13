@@ -1,8 +1,8 @@
 {
   "__ssr_module_mapping__": {
-    "(app-client)/./app/page.js": {
+    "(app-client)/./app/page.tsx": {
       "": {
-        "id": "(sc_client)/./app/page.js",
+        "id": "(sc_client)/./app/page.tsx",
         "name": "",
         "chunks": [
           "app/page:app/page"
@@ -10,7 +10,7 @@
         "async": false
       },
       "*": {
-        "id": "(sc_client)/./app/page.js",
+        "id": "(sc_client)/./app/page.tsx",
         "name": "*",
         "chunks": [
           "app/page:app/page"
@@ -18,7 +18,7 @@
         "async": false
       },
       "default": {
-        "id": "(sc_client)/./app/page.js",
+        "id": "(sc_client)/./app/page.tsx",
         "name": "default",
         "chunks": [
           "app/page:app/page"
@@ -208,6 +208,40 @@
         "async": false
       }
     },
+    "(app-client)/./app/movies/[id]/page.tsx": {
+      "": {
+        "id": "(sc_client)/./app/movies/[id]/page.tsx",
+        "name": "",
+        "chunks": [
+          "app/movies/[id]/page:app/movies/[id]/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./app/movies/[id]/page.tsx",
+        "name": "*",
+        "chunks": [
+          "app/movies/[id]/page:app/movies/[id]/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/movies/[id]/page.tsx",
+        "name": "default",
+        "chunks": [
+          "app/movies/[id]/page:app/movies/[id]/page"
+        ],
+        "async": false
+      },
+      "getData": {
+        "id": "(sc_client)/./app/movies/[id]/page.tsx",
+        "name": "getData",
+        "chunks": [
+          "app/movies/[id]/page:app/movies/[id]/page"
+        ],
+        "async": false
+      }
+    },
     "(app-client)/./app/about/page.js": {
       "": {
         "id": "(sc_client)/./app/about/page.js",
@@ -233,54 +267,20 @@
         ],
         "async": false
       }
-    },
-    "(app-client)/./app/movies/[id]/page.js": {
-      "": {
-        "id": "(sc_client)/./app/movies/[id]/page.js",
-        "name": "",
-        "chunks": [
-          "app/movies/[id]/page:app/movies/[id]/page"
-        ],
-        "async": false
-      },
-      "*": {
-        "id": "(sc_client)/./app/movies/[id]/page.js",
-        "name": "*",
-        "chunks": [
-          "app/movies/[id]/page:app/movies/[id]/page"
-        ],
-        "async": false
-      },
-      "default": {
-        "id": "(sc_client)/./app/movies/[id]/page.js",
-        "name": "default",
-        "chunks": [
-          "app/movies/[id]/page:app/movies/[id]/page"
-        ],
-        "async": false
-      },
-      "getData": {
-        "id": "(sc_client)/./app/movies/[id]/page.js",
-        "name": "getData",
-        "chunks": [
-          "app/movies/[id]/page:app/movies/[id]/page"
-        ],
-        "async": false
-      }
     }
   },
   "__edge_ssr_module_mapping__": {},
   "__entry_css_files__": {
-    "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\page": [
+    "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\app\\page": [
       "static/css/app/page.css"
     ],
-    "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\about\\page": [
-      "static/css/app/about/page.css"
-    ],
-    "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\movies\\[id]\\page": [
+    "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\app\\movies\\[id]\\page": [
       "static/css/app/movies/[id]/page.css"
     ],
-    "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\layout": [
+    "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\app\\about\\page": [
+      "static/css/app/about/page.css"
+    ],
+    "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\app\\layout": [
       "static/css/_app-client_app_css_Main_module_css.css",
       "static/css/_app-client_node_modules_bootstrap_dist_css_bootstrap_min_css.css",
       "static/css/_app-client_component_css_navbar_NavBar_module_css.css",
@@ -288,7 +288,7 @@
       "static/css/_app-client_app_css_reset_css.css"
     ]
   },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\node_modules\\semantic-ui-css\\semantic.min.css": {
+  "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\node_modules\\@next\\font\\google\\target.css?{\"path\":\"app\\\\page.tsx\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":\"600\",\"preload\":false}],\"variableName\":\"inter\"}": {
     "default": {
       "id": "null",
       "name": "default",
@@ -297,16 +297,7 @@
       ]
     }
   },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\node_modules\\@next\\font\\google\\target.css?{\"path\":\"app\\\\page.js\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":\"600\",\"preload\":false}],\"variableName\":\"inter\"}": {
-    "default": {
-      "id": "null",
-      "name": "default",
-      "chunks": [
-        "static/css/app/page.css"
-      ]
-    }
-  },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\css\\Main.module.css": {
+  "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\app\\css\\Main.module.css": {
     "default": {
       "id": "null",
       "name": "default",
@@ -316,7 +307,7 @@
       ]
     }
   },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\component\\css\\loading\\Loading.module.css": {
+  "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\component\\css\\loading\\Loading.module.css": {
     "default": {
       "id": "null",
       "name": "default",
@@ -325,9 +316,9 @@
       ]
     }
   },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\page.js": {
+  "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\app\\page.tsx": {
     "": {
-      "id": "(app-client)/./app/page.js",
+      "id": "(app-client)/./app/page.tsx",
       "name": "",
       "chunks": [
         "app/page:app/page"
@@ -335,7 +326,7 @@
       "async": false
     },
     "*": {
-      "id": "(app-client)/./app/page.js",
+      "id": "(app-client)/./app/page.tsx",
       "name": "*",
       "chunks": [
         "app/page:app/page"
@@ -343,7 +334,7 @@
       "async": false
     },
     "default": {
-      "id": "(app-client)/./app/page.js",
+      "id": "(app-client)/./app/page.tsx",
       "name": "default",
       "chunks": [
         "app/page:app/page"
@@ -351,7 +342,7 @@
       "async": false
     }
   },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\node_modules\\next\\dist\\client\\link.js": {
+  "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\node_modules\\next\\dist\\client\\link.js": {
     "": {
       "id": "(app-client)/./node_modules/next/dist/client/link.js",
       "name": "",
@@ -377,7 +368,7 @@
       "async": false
     }
   },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\styles\\img\\movieLogo.jpg": {
+  "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\styles\\img\\movieLogo.jpg": {
     "": {
       "id": "(app-client)/./styles/img/movieLogo.jpg",
       "name": "",
@@ -403,7 +394,7 @@
       "async": false
     }
   },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\node_modules\\next\\dist\\client\\image.js": {
+  "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\node_modules\\next\\dist\\client\\image.js": {
     "": {
       "id": "(app-client)/./node_modules/next/dist/client/image.js",
       "name": "",
@@ -429,7 +420,7 @@
       "async": false
     }
   },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\node_modules\\next\\dist\\client\\components\\app-router.js": {
+  "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\node_modules\\next\\dist\\client\\components\\app-router.js": {
     "": {
       "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
       "name": "",
@@ -455,7 +446,7 @@
       "async": false
     }
   },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\node_modules\\next\\dist\\client\\components\\error-boundary.js": {
+  "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\node_modules\\next\\dist\\client\\components\\error-boundary.js": {
     "": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "",
@@ -481,7 +472,7 @@
       "async": false
     }
   },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\node_modules\\next\\dist\\client\\components\\layout-router.js": {
+  "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\node_modules\\next\\dist\\client\\components\\layout-router.js": {
     "": {
       "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
       "name": "",
@@ -507,7 +498,7 @@
       "async": false
     }
   },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js": {
+  "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js": {
     "": {
       "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
       "name": "",
@@ -533,42 +524,7 @@
       "async": false
     }
   },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\about\\css\\About.module.css": {
-    "default": {
-      "id": "null",
-      "name": "default",
-      "chunks": [
-        "static/css/app/about/page.css"
-      ]
-    }
-  },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\about\\page.js": {
-    "": {
-      "id": "(app-client)/./app/about/page.js",
-      "name": "",
-      "chunks": [
-        "app/about/page:app/about/page"
-      ],
-      "async": false
-    },
-    "*": {
-      "id": "(app-client)/./app/about/page.js",
-      "name": "*",
-      "chunks": [
-        "app/about/page:app/about/page"
-      ],
-      "async": false
-    },
-    "default": {
-      "id": "(app-client)/./app/about/page.js",
-      "name": "default",
-      "chunks": [
-        "app/about/page:app/about/page"
-      ],
-      "async": false
-    }
-  },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\movies\\[id]\\css\\detailMovie.module.css": {
+  "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\app\\movies\\[id]\\css\\detailMovie.module.css": {
     "default": {
       "id": "null",
       "name": "default",
@@ -577,9 +533,9 @@
       ]
     }
   },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\movies\\[id]\\page.js": {
+  "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\app\\movies\\[id]\\page.tsx": {
     "": {
-      "id": "(app-client)/./app/movies/[id]/page.js",
+      "id": "(app-client)/./app/movies/[id]/page.tsx",
       "name": "",
       "chunks": [
         "app/movies/[id]/page:app/movies/[id]/page"
@@ -587,7 +543,7 @@
       "async": false
     },
     "*": {
-      "id": "(app-client)/./app/movies/[id]/page.js",
+      "id": "(app-client)/./app/movies/[id]/page.tsx",
       "name": "*",
       "chunks": [
         "app/movies/[id]/page:app/movies/[id]/page"
@@ -595,7 +551,7 @@
       "async": false
     },
     "default": {
-      "id": "(app-client)/./app/movies/[id]/page.js",
+      "id": "(app-client)/./app/movies/[id]/page.tsx",
       "name": "default",
       "chunks": [
         "app/movies/[id]/page:app/movies/[id]/page"
@@ -603,7 +559,7 @@
       "async": false
     },
     "getData": {
-      "id": "(app-client)/./app/movies/[id]/page.js",
+      "id": "(app-client)/./app/movies/[id]/page.tsx",
       "name": "getData",
       "chunks": [
         "app/movies/[id]/page:app/movies/[id]/page"
@@ -611,7 +567,42 @@
       "async": false
     }
   },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\app\\css\\reset.css": {
+  "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\app\\about\\css\\About.module.css": {
+    "default": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/about/page.css"
+      ]
+    }
+  },
+  "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\app\\about\\page.js": {
+    "": {
+      "id": "(app-client)/./app/about/page.js",
+      "name": "",
+      "chunks": [
+        "app/about/page:app/about/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./app/about/page.js",
+      "name": "*",
+      "chunks": [
+        "app/about/page:app/about/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./app/about/page.js",
+      "name": "default",
+      "chunks": [
+        "app/about/page:app/about/page"
+      ],
+      "async": false
+    }
+  },
+  "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\app\\css\\reset.css": {
     "default": {
       "id": "null",
       "name": "default",
@@ -620,7 +611,7 @@
       ]
     }
   },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\node_modules\\@next\\font\\google\\target.css?{\"path\":\"component\\\\NavBar.js\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":\"600\",\"preload\":false}],\"variableName\":\"inter\"}": {
+  "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\node_modules\\@next\\font\\google\\target.css?{\"path\":\"component\\\\NavBar.js\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":\"600\",\"preload\":false}],\"variableName\":\"inter\"}": {
     "default": {
       "id": "null",
       "name": "default",
@@ -629,7 +620,7 @@
       ]
     }
   },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\component\\css\\navbar\\NavBar.module.css": {
+  "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\component\\css\\navbar\\NavBar.module.css": {
     "default": {
       "id": "null",
       "name": "default",
@@ -638,7 +629,7 @@
       ]
     }
   },
-  "C:\\Users\\tkdqj\\Desktop\\이상범\\기타\\NextJS\\next-practice04\\node_modules\\bootstrap\\dist\\css\\bootstrap.min.css": {
+  "C:\\Users\\deps\\OneDrive\\바탕 화면\\20230117 test\\use_Next.js13\\node_modules\\bootstrap\\dist\\css\\bootstrap.min.css": {
     "default": {
       "id": "null",
       "name": "default",

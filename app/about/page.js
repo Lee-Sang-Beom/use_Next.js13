@@ -8,20 +8,6 @@ const About = () => {
     e.target.style.borderRadius = "5rem";
     e.target.style.fontSize = "1.03rem";
     e.target.textContent = "현재 인기 있는 영화의 목록을 출력합니다.";
-
-    // const currentTag = document.querySelector(
-    //   ".About_about_section_left_box__aj_Gj"
-    // );
-    // const new_pTag = document.createElement("p");
-    // new_pTag.textContent = "hello";
-    // new_pTag.style.color = "white";
-    // new_pTag.setAttribute("className", "pTag");
-
-    // setTimeout(() => {
-    //   currentTag.appendChild(new_pTag);
-    // }, 1000);
-
-    // console.log(new_pTag);
   };
 
   const onMouseLeavePopular = (e) => {
@@ -50,7 +36,6 @@ const About = () => {
         <Link href="/about">
           <div className={styles.about_section_right_box}>개발 예정</div>
         </Link>
-        
       </div>
     </div>
   );

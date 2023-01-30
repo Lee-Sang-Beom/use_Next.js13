@@ -1,5 +1,4 @@
 "use client";
-import { useRouter } from "next/router";
 import { use } from "react";
 import styles from "./css/detailMovie.module.css";
 
